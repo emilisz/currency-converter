@@ -8,8 +8,8 @@
         </h1>
         <div class="p-3">
             <div class="p-2 flex flex-row">
-                <p class="flex flex-wrap content-center flex-none text-sm select-none">Current:</p>
-                <select wire:model.lazy="base" name="current" id="current" class="border ml-2 rounded w-16 flex-grow">
+                <label for="currency" class="flex flex-wrap content-center flex-none text-sm select-none">Current:</label>
+                <select wire:model.lazy="base" name="currency" id="currency" class="border ml-2 rounded w-16 flex-grow">
                     <option value="EUR">EUR</option>
                     <option value="USD">USD</option>
                     <option value="AUD">AUD</option>
@@ -17,8 +17,8 @@
                     <option value="PLN">PLN</option>
                     <option value="MXN">MXN</option>
                 </select>
-                <p class="flex flex-wrap content-center flex-none text-sm px-2 select-none">Amount:</p>
-                <input type="number" wire:model.lazy="amount" value="1" class="flex-grow w-12 border ml-2 px-2">
+                <label for="amount" class="flex flex-wrap content-center flex-none text-sm px-2 select-none">Amount:</label>
+                <input type="number" id="amount" wire:model.lazy="amount" value="1" class="flex-grow w-12 border ml-2 px-2">
             </div>
             <div class="text-center select-none">Date: {{ $response['date']}}</div>
             <div class="overflow-y-auto h-96">
